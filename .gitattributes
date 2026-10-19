@@ -1,0 +1,6 @@
+* text=auto eol=lf
+release/** -text
+*.exe binary
+*.dll binary
+*.o binary
+*.res binary

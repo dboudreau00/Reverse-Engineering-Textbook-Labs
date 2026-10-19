@@ -1,0 +1,5 @@
+out/
+.venv/
+bin/
+obj/
+__pycache__/
