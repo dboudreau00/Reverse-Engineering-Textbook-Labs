@@ -1,0 +1,21 @@
+esreveR Engineering for Beginners: lab programs, rebuilt 19 October 2026 from the sources printed in the book.
+
+Toolchain (Ubuntu 24.04, the versions the book's appendix names): MinGW-w64 GCC 13.2 (msvcrt) for the C programs and DLLs,
+UPX 4.2.2, osslsigncode 2.8, OpenSSL 3.0.13, Python 3.12 with pefile and NumPy for Lab 12.5, and the .NET SDK 8.0.131 for the four
+C# labs. The C# labs target net8.0 and are built with dotnet build -c Release -r win-x64 --self-contained false, so each has a
+Name.exe apphost, Name.dll and Name.runtimeconfig.json (framework-dependent; dotnet Name.dll runs it too).
+Build commands are the ones in each lab.
+
+Checked against the book: lab9_upx.exe is 8,192 bytes, with UPX0 49,152 bytes in memory and UPX1 entropy 7.53; lab1s.exe is 14,848 bytes
+and its signature starts at 0x3A00; the 80-program dataset reproduces Lab 12.5's group table, the 75% entropy baseline, 100% on the
+24 held-out samples and the weights +0.72, -2.89 and +2.89.
+
+Files: lab1.exe lab1s.exe lab1_signed.exe lab5.exe lab9.exe lab9s.exe lab9_upx.exe lab9_unpacked.exe lab9c.exe labtool.exe svch0st.exe
+killswitch.exe killswitch_upx.exe rotor.exe curves.exe apihash.exe verify.exe flat.exe labhelper_tools.dll labhelper_app.dll greet.exe
+greet_safe.exe labhelper_modified.dll vmcheck.exe notes.exe dga.exe, corpus_O0.o O1 O2 O3 Os, dotnet\Lab7, Lab9Net, LabVault, Lab14Obf
+(each .exe, .dll and .runtimeconfig.json), and dataset\ (the 80 programs in samples\, the generator sources, dataset.csv, model.json,
+gen_dataset.py, pefeatures.py, train.py and corpus.c).
+lab1_signed.exe is signed with a throwaway certificate (CN=esreveR Lab Code Signing); the key was not kept.
+
+Not built: the MSVC (cl) variants of the labs, since Visual Studio Build Tools are not installed.
+Every program is a harmless training sample; none contacts a live host. Antivirus products flag the packed and malware-like ones.
