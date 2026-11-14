@@ -4,6 +4,8 @@ The programs behind *esreveR Engineering for Beginners*, a free textbook for rea
 
 Book and walkthrough: [Learn Reverse Engineering from Scratch](https://dboudreau.dev/2026/10/19/learn-reverse-engineering-from-scratch/)
 
+**The book itself:** [`esreveR-Engineering-for-Beginners.pdf`](esreveR-Engineering-for-Beginners.pdf) (316 pages, 7 × 10 in, 6.7 MB).
+
 > **In your VM environment only.** These are harmless training samples: none of them carries a payload or contacts a live host. They still behave like the things they imitate (a kill switch, a domain generator, a renamed system tool, packed and virtualized code), and antivirus products flag them. Run them in a virtual machine you can revert, never on your everyday PC.
 
 ## Get the labs
@@ -15,6 +17,7 @@ Book and walkthrough: [Learn Reverse Engineering from Scratch](https://dboudreau
 
 | Path | What it holds |
 |---|---|
+| `esreveR-Engineering-for-Beginners.pdf` | the textbook (7 × 10 in edition) |
 | `src/c/` | C sources, resource files and `make_config.py`, one file per program |
 | `src/dotnet/` | the four C# labs, one project each |
 | `src/dataset/` | the Lab 12.5 dataset generator, feature extractor and trainer |

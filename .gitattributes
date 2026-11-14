@@ -4,3 +4,4 @@ release/** -text
 *.dll binary
 *.o binary
 *.res binary
+*.pdf binary
